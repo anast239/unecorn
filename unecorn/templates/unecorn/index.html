@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+<div class="categorie">
+	<ul>
+	{% for c in categories %}
+		<li>{{ c.name }}</li>
+	{% endfor %}
+	</ul>
+</div>
+
+<div class="content">
+	
+{% for discount in discounts %}
+
+<h4>{{ discount.name }}</h4>
+<div class="text">{{ discount.text }}</div>
+<a href="{{ discount.url }}">Адресс</a>
+
+{% endfor %}
+	
+</div>
+
+</body>
+</html>
